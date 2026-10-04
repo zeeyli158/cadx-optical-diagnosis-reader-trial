@@ -26,7 +26,7 @@ normalize_histology <- function(x) {
 lesion_data <- read_excel(input_file, sheet = "Sheet1") %>%
   transmute(
     lesion_id = as.character(new_file_name),
-    patient_id = as.character(姓名),
+    patient_id = as.character(ID),
     reference_histology = normalize_histology(Histology),
     size_mm = as.numeric(Size),
     ai_prediction = as.integer(AI_diagnosis),
